@@ -13,8 +13,9 @@ package ObjectManagement;
 public class ContainerOfObjects {
     
     private final int DEFAULT_SIZE = 100;
-    private Object objects[];
+    private Object object[];
     private int counter = 0;
+   
     
     //metodo construtor
     
@@ -25,7 +26,7 @@ public class ContainerOfObjects {
     //Valor por defeito de elementos (tamanho omitido) que ContainerOfObjects pode conter
     public ContainerOfObjects(Object[] object){
         this.object = object;
-        this.counter = this.objects.length;
+        this.counter = this.object.length;
     }
     //Instanciar com base num vetor de elementos recebidos
     public ContainerOfObjects(){
@@ -42,7 +43,7 @@ public class ContainerOfObjects {
             return false;
         }
     }
-    protected removeObject(int position){
+    protected Object removeObject(int position){
         if(position < object.length && position != -1){
             if(object[position] == null){
                 System.out.println("Objecto nao existe");
